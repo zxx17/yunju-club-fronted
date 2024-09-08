@@ -1,0 +1,46 @@
+// 定义字体家族变量
+@font-family: Arial, sans-serif;
+
+// 定义颜色变量
+@text-color: gray;
+@highlight-color: bold;
+
+// 定义边距变量
+@margin: 20px;
+@list-margin-bottom: 10px;
+@paragraph-margin-bottom: 20px;
+
+// .introduction-container 样式
+.introduction-container {
+  font-family: @font-family;
+  line-height: 1.6;
+  margin: @margin;
+  color: @text-color;
+
+  // 子元素p和h2的样式
+  p,
+  h2 {
+    margin-bottom: @paragraph-margin-bottom;
+  }
+
+  // .benefits 样式
+  .benefits {
+    margin-left: @margin;
+  }
+
+  // .highlight 类名的样式
+  .highlight {
+    font-weight: @highlight-color;
+  }
+
+  // ul 元素的样式
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    // li 元素的样式
+    li {
+      margin-bottom: @list-margin-bottom;
+    }
+  }
+}
