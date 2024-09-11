@@ -52,6 +52,10 @@ export default ({ mode }) => {
         '/circle': {
           target: env.VITE_API_HOST,
           changeOrigin: true
+        },
+        '/iot':{
+          target: env.VITE_API_HOST,
+          changeOrigin: true
         }
       }
     }

@@ -1,27 +1,18 @@
-import { useLocation } from 'react-router-dom'
 import './index.less'
 import { Button, Dropdown, Space } from 'antd'
-import Search from 'antd/es/transfer/search'
 import { useNavigate } from 'react-router-dom'
 
 const discoverItems = [
   {
-    title: '是',
+    title: '已完成',
     key: 'yes'
-  },
-  {
-    title: '否',
-    key: 'no'
   }
 ]
 
 function IoTSimLabFrame() {
-  const location = useLocation()
-  const vmurl = typeof location.state?.vmurl === 'string' ? location.state.vmurl : ''
   const navigate = useNavigate()
-
   const goIotSimLab = () => {
-    navigate('/iot-vm')
+    navigate('/iotsimulation-lab')
   }
   return (
     <div>
@@ -52,7 +43,7 @@ function IoTSimLabFrame() {
         </span>
       </div>
       <div className='iframe-container'>
-        <iframe src={vmurl || 'https://wokwi.com/projects/new/arduino-uno'} />
+        <iframe src={'https://wokwi.com/projects/new/arduino-uno'} />
         <div className='overlay-header' />
       </div>
     </div>

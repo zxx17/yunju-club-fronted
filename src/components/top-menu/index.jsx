@@ -25,7 +25,7 @@ const MENULIST = [
   {
     key: 'iotSimulationLab',
     title: '仿真实验室',
-    route: '/iot-vm',
+    route: '/iotsimulation-lab',
     finished: true
   },
   {
@@ -62,12 +62,7 @@ const TopMenu = () => {
    */
   const changeMenu = item => () => {
     const userInfoStorage = localStorage.getItem('userInfo')
-    // TODO temp
-    if(item.route ==='/iot-vm'){
-      setCurrentKey(item.key)
-      navigate(item.route)
-    }
-    if (!userInfoStorage ) {
+    if (!userInfoStorage) {
       return message.info('请登录')
     }
     if (item.finished) {

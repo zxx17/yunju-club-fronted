@@ -20,6 +20,8 @@ const layout = {
 
 interface UserInfo {
   nickName?: string
+  userName?: string
+  password?: string
   phone?: string
   email?: string
   sex?: string | number
@@ -188,6 +190,36 @@ const UserInfo = () => {
               )}
             </Col>
             <Col span={16}>
+            {editFlag ? (
+                <Form.Item label='账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号' name='userName'>
+                  <Input disabled placeholder={userInfo.userName || ''}/>
+                </Form.Item>
+              ) : (
+                <Form.Item label='账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号'>
+                  <span
+                    style={{
+                    userSelect: 'text',
+                    WebkitUserSelect: 'text',
+                    MozUserSelect: 'text',
+                    msUserSelect: 'text',
+                    cursor: 'text',
+                    }}
+                  >
+                    {userInfo.userName || ''}
+                  </span>
+                </Form.Item>
+              )}
+            </Col>
+            <Col span={16}>
+              {editFlag ? (
+                <Form.Item label='密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码' name='password'>
+                  <Input placeholder='设置密码，之后您可以使用账号和密码登录' />
+                </Form.Item>
+              ) : (
+                  null
+              )}
+            </Col>
+            <Col span={16}>
               {editFlag ? (
                 <Form.Item label='性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别' name='sex'>
                   <Radio.Group>
@@ -254,9 +286,11 @@ const UserInfo = () => {
                   </>
                 ) : (
                   <Button type='primary' onClick={() => setEditFlag(true)}>
-                    编辑
+                    修改个人信息
                   </Button>
+
                 )}
+
               </Form.Item>
             </Col>
           </Row>

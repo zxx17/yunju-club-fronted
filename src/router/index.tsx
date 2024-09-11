@@ -56,11 +56,11 @@ const router = createBrowserRouter([
         Component: lazy(() => import('@views/chicken-circle'))
       },
       {
-        path: 'iot-vm',
+        path: 'iotsimulation-lab',
         Component: lazy(() => import('@views/iot-simulation-lab'))
       },
       {
-        path: 'iot-vm-frame',
+        path: 'iotsimulation-lab-frame',
         Component: lazy(() => import('@views/iot-simulation-lab/iframe-lab/index'))
       }
     ]

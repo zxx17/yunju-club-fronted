@@ -1,96 +1,59 @@
-import React from 'react'
-import { Layout, Menu, theme } from 'antd'
-import { Divider } from 'antd'
-import { Col, Row, Statistic } from 'antd'
+import { useEffect, useState } from 'react'
+import { Layout, Menu, theme, message, Col, Row, Statistic, Divider } from 'antd'
 import CountUp from 'react-countup'
+import req from '@utils/request'
 import './index.less'
-import { AppstoreOutlined, SettingOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
 
 const formatter = value => <CountUp end={value} separator=',' />
 const { Content, Sider } = Layout
-const items = [
-  {
-    key: 'iot-vm-2',
-    label: '推荐的项目(Quick Start)',
-    icon: <SettingOutlined />,
-    children: [
-      {
-        key: '9',
-        label: 'Option 9',
-        vmurl: 'https://wokwi.com/arduino'
-      },
-      {
-        key: '10',
-        label: 'Option 10'
-      },
-      {
-        key: '11',
-        label: 'Option 11'
-      },
-      {
-        key: '12',
-        label: 'Option 12'
-      }
-    ]
-  },
-  {
-    type: 'divider'
-  },
-  {
-    key: 'iot-vm-1',
-    label: '开发板列表',
-    icon: <AppstoreOutlined />,
-    children: [
-      {
-        key: '1',
-        label: 'Arduino',
-        children: [
-          { key: '7', label: 'Option 7' },
-          { key: '8', label: 'Option 8' }
-        ]
-      },
-      {
-        key: '2',
-        label: 'ESP 32',
-        children: [
-          { key: '7', label: 'Option 7' },
-          { key: '8', label: 'Option 8' }
-        ]
-      },
-      {
-        key: '3',
-        label: 'STM32',
-        children: [
-          { key: '7', label: 'Option 7' },
-          { key: '8', label: 'Option 8' }
-        ]
-      },
-      {
-        key: '4',
-        label: 'Pi Pico',
-        children: [
-          { key: '7', label: 'Option 7' },
-          { key: '8', label: 'Option 8' }
-        ]
-      }
-    ]
-  },
-  {
-    type: 'divider'
-  },
-  {
-    key: 'rank',
-    label: '实验完成数排行榜'
-  }
-]
 
-// 找出对应的url
+// 左侧菜单
+const menuApiName = '/simLab/menu'
+const getLeftMenu = async () => {
+  const response = await req(
+    {
+      method: 'get',
+      url: menuApiName
+    },
+    '/iot'
+  )
+
+  if (response.success && response.data) {
+    return response.data
+  } else {
+    message.error('获取数据失败')
+  }
+}
+
+// 头部数据展示
+const simCountApiName = '/simLab/count'
+const getSimCount = async () => {
+  const response = await req(
+    {
+      method: 'get',
+      url: simCountApiName
+    },
+    '/iot'
+  )
+  if (response.success && response.data) {
+    return response.data
+  } else {
+    message.error('获取数据失败')
+  }
+}
+
+/**
+ * 找出对应的projectUrl
+ * @param {菜单数组} items
+ * @param {key} key
+ * @returns 实验支持地址projectUrl
+ */
 const findItemByKey = (items, key) => {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
     if (item.key === key) {
-      return item.vmurl
+      return item.projectUrl
     }
     if (item.children) {
       const found = findItemByKey(item.children, key)
@@ -101,18 +64,43 @@ const findItemByKey = (items, key) => {
   }
   return null
 }
+/**
+ * IoTSimLab虚拟仿真实验室
+ * @returns IoTSimLab
+ */
 const IoTSimLab = () => {
   const {
     token: { colorBgContainer, borderRadiusLG }
   } = theme.useToken()
   const navigate = useNavigate()
 
+  const [menuItems, setMenuItems] = useState([])
+  const [simCount, setSimCount] = useState({})
+  useEffect(() => {
+    /**请求菜单 */
+    const fetchMenuItems = async () => {
+      const data = await getLeftMenu()
+      setMenuItems(data || [])
+    }
+    fetchMenuItems()
+
+    /**请求计数 */
+    const fetchSimCount = async () => {
+      const data = await getSimCount()
+      console.log(data)
+      setSimCount(data || [])
+    }
+    fetchSimCount()
+  }, [])
+
+  /*点击跳转到具体实验室 */
   const onClick = e => {
     const keyValue = e.key
-    const itemValue = findItemByKey(items, keyValue)
+    const itemValue = findItemByKey(menuItems, keyValue)
     console.log('click ', keyValue, ' with url ', itemValue)
-    navigate('/iot-vm-frame', { state: { vmurl: itemValue } })
+    navigate('/iotsimulation-lab-frame')
   }
+
   return (
     <Layout>
       <Content
@@ -138,10 +126,10 @@ const IoTSimLab = () => {
               style={{
                 width: 256
               }}
-              defaultSelectedKeys={['iot-vm-2']}
-              defaultOpenKeys={['iot-vm-2']}
+              defaultSelectedKeys={['recommend', 'device']}
+              defaultOpenKeys={['recommend', 'device']}
               mode='inline'
-              items={items}
+              items={menuItems}
             />
           </Sider>
           <Content
@@ -152,12 +140,16 @@ const IoTSimLab = () => {
           >
             <Row gutter={16}>
               <Col span={12}>
-                <Statistic title='IOT仿真实验访问人次' value={102} formatter={formatter} />
+                <Statistic
+                  title='IOT仿真实验项目总数'
+                  value={simCount.projectCount}
+                  formatter={formatter}
+                />
               </Col>
               <Col span={12}>
                 <Statistic
                   title='累计完成仿真实验总数'
-                  value={368}
+                  value={simCount.finishedCount}
                   precision={2}
                   formatter={formatter}
                 />

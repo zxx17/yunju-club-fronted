@@ -49,7 +49,7 @@ const discoverItems = [
   },
   {
     title: '中国物联网协会',
-    subTitle: '从0到1做企业级框架项目',
+    subTitle: '获取最新物联网技术资讯',
     key: 'cniot',
     path: 'http://iot.china.com.cn/'
   },
