@@ -12,7 +12,7 @@ const discoverItems = [
 function IoTSimLabFrame() {
   const navigate = useNavigate()
   const goIotSimLab = () => {
-    navigate('/iotsimulation-lab')
+    navigate('/iotSimulationLab')
   }
   return (
     <div>

@@ -102,12 +102,12 @@ export default class JudgeQuestions extends Component {
     const { subjectName } = this.state
     let isDisabledSubmit = false
     if (
-      !!!subjectName ||
+      !subjectName ||
       this.currentActive?.length <= 0 ||
-      !!!this.firstCategoryValue ||
+      !this.firstCategoryValue ||
       this.secondCategoryValue.length <= 0 ||
       this.thirdCategoryValue.length <= 0 ||
-      !!!this.scoreValue
+      !this.scoreValue
     ) {
       isDisabledSubmit = true
     }
@@ -212,7 +212,7 @@ export default class JudgeQuestions extends Component {
    * 录入成功弹框-去首页
    */
   onGoHomeSuccessModal = () => {
-    window.location.href = '/question-bank'
+    window.location.href = '/questionBank'
   }
 
   /**

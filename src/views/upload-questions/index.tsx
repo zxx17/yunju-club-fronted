@@ -28,7 +28,7 @@ const UploadQuestions = () => {
       if (res.success && res.data) {
         if (!res.data.includes('subject:add')) {
           message.info('暂无权限')
-          navigate('/question-bank')
+          navigate('/questionBank')
         }
       }
     })

@@ -174,7 +174,7 @@ const Header = () => {
           >
             <Button type='link'>更多</Button>
           </Dropdown>
-          {'/question-bank' == pathname && (
+          {'/questionBank' == pathname && (
             <div className='head-navigator-input-box'>
               <Search
                 placeholder='请输入感兴趣的内容～'

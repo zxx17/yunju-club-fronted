@@ -29,6 +29,6 @@
       "@features/*": ["src/store/feature/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/components/suspend-button/index.jsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

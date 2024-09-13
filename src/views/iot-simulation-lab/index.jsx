@@ -98,7 +98,7 @@ const IoTSimLab = () => {
     const keyValue = e.key
     const itemValue = findItemByKey(menuItems, keyValue)
     console.log('click ', keyValue, ' with url ', itemValue)
-    navigate('/iotsimulation-lab-frame')
+    navigate('/iotSimulationLabFrame')
   }
 
   return (
@@ -156,6 +156,9 @@ const IoTSimLab = () => {
               </Col>
             </Row>
             <Divider />
+            {/* <div style={{ marginLeft: 40 }}>
+              <img src='src/imgs/' width={600} height={300} />
+            </div> */}
             <div>
               <div className='introduction-container'>
                 <p>

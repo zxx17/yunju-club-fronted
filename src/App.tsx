@@ -6,6 +6,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom'
 // 引入对应的方法
 import './App.less'
 import { saveUserInfo } from './store/features/userInfoSlice.ts'
+import SuspendButton from '@components/suspend-button';
 
 const apiName = {
   update: '/user/update',
@@ -49,7 +50,7 @@ const App = () => {
       if (!userInfoStorage) {
         return window.location.replace('/login')
       }
-      navigate('/question-bank')
+      navigate('/questionBank')
     }
   }, [location])
   return (
@@ -70,6 +71,14 @@ const App = () => {
         <a href='http://beian.miit.gov.cn/' target='_blank' rel="noreferrer">
           闽ICP备xxxxxxxxx号
         </a>
+      </div>
+      <div>
+        {/* 根据 userInfoStorage 是否为空来控制 div 的显示 */}
+        {userInfoStorage ? (
+          <div>
+            <SuspendButton img='src/imgs/aiButton.png' />
+          </div>
+        ) : null}
       </div>
     </div>
   )

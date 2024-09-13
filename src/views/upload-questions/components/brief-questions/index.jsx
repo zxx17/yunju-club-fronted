@@ -244,7 +244,7 @@ export default class BriefQuestions extends Component {
    * 录入成功弹框-去首页
    */
   onGoHomeSuccessModal = () => {
-    window.location.href = '/question-bank'
+    window.location.href = '/questionBank'
   }
 
   /**

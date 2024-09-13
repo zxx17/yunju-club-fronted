@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: 'question-bank',
+        path: 'questionBank',
         Component: lazy(() => import('@views/question-bank'))
       },
       {
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         Component: lazy(() => import('@views/personal-center'))
       },
       {
-        path: 'practise-questions',
+        path: 'practiseQuestions',
         Component: lazy(() => import('@views/practise/practise-questions'))
       },
       {
@@ -52,16 +52,16 @@ const router = createBrowserRouter([
         Component: lazy(() => import('@views/practise/practise-analytic'))
       },
       {
-        path: 'jichi-club',
+        path: 'yunjuClub',
         Component: lazy(() => import('@views/chicken-circle'))
       },
       {
-        path: 'iotsimulation-lab',
+        path: 'iotSimulationLab',
         Component: lazy(() => import('@views/iot-simulation-lab'))
       },
       {
-        path: 'iotsimulation-lab-frame',
-        Component: lazy(() => import('@views/iot-simulation-lab/iframe-lab/index'))
+        path: 'iotSimulationLabFrame',
+        Component: lazy(() => import('@/views/iot-simulation-lab/frame-lab/index'))
       }
     ]
   }

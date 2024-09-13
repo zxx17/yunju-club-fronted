@@ -65,22 +65,22 @@ const Login = () => {
    */
   const doLoginByAccount = async () => {
     if (!account || !password) return;
-      const response = await req({
-        method: 'post',
-        url: loginApiName+"?validCode=#",
-        data: { userName: account, password: password }
-      }, '/auth');
+    const response = await req({
+      method: 'post',
+      url: loginApiName + "?validCode=#",
+      data: { userName: account, password: password }
+    }, '/auth');
 
-      if (response.success && response.data) {
-        message.success('登录成功');
-        localStorage.setItem('userInfo', JSON.stringify(response.data));
-        await getUserInfo(response.data.loginId);
-        setTimeout(() => {
-          navigate('/question-bank');
-        }, 500);
-      } else {
-        message.error('登录失败，请重试');
-      }
+    if (response.success && response.data) {
+      message.success('登录成功');
+      localStorage.setItem('userInfo', JSON.stringify(response.data));
+      await getUserInfo(response.data.loginId);
+      setTimeout(() => {
+        navigate('/questionBank');
+      }, 500);
+    } else {
+      message.error('登录失败，请重试');
+    }
   };
 
   return (
@@ -120,17 +120,17 @@ const Login = () => {
             </div>
           ) : (
             <Form layout="vertical">
-               <div className='qrcode-desc'>
+              <div className='qrcode-desc'>
                 <p>公众号验证码登录后前往个人中心</p>
                 <p>设置密码后，即可使用账号密码登录</p>
               </div>
-              <div style={{marginTop:30}}>
-              <Form.Item label="账号" required>
-                <Input value={account} onChange={e => setAccount(e.target.value)} />
-              </Form.Item>
-              <Form.Item label="密码" required>
-                <Input.Password value={password} onChange={e => setPassword(e.target.value)} />
-              </Form.Item>
+              <div style={{ marginTop: 30 }}>
+                <Form.Item label="账号" required>
+                  <Input value={account} onChange={e => setAccount(e.target.value)} />
+                </Form.Item>
+                <Form.Item label="密码" required>
+                  <Input.Password value={password} onChange={e => setPassword(e.target.value)} />
+                </Form.Item>
               </div>
               <Space>
                 <Button size='small' type='primary' ghost onClick={doLoginByAccount}>
@@ -139,7 +139,7 @@ const Login = () => {
               </Space>
               <div style={{ marginTop: 10 }}>
                 <Button onClick={() => setIsAccountLogin(false)} type="link">
-                {'>>'}切换到验证码登录
+                  {'>>'}切换到验证码登录
                 </Button>
               </div>
             </Form>

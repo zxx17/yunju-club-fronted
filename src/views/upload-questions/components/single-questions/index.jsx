@@ -64,7 +64,7 @@ export default class SingleQuestions extends Component {
     if (!isSubmit) {
       return
     }
-    if (!!!subjectName) {
+    if (!subjectName) {
       message.warning('请输入题目名称')
       return
     }
@@ -72,7 +72,7 @@ export default class SingleQuestions extends Component {
       message.warning('请录入答案')
       return
     }
-    if (!!!this.firstCategoryValue) {
+    if (!this.firstCategoryValue) {
       message.warning('请选择一级分类')
       return
     }
@@ -153,12 +153,12 @@ export default class SingleQuestions extends Component {
     let list = this.currentActive.filter(item => item.optionContent === defalutLabel)
     let isDisabledSubmit = false
     if (
-      !!!subjectName ||
+      !subjectName ||
       list.length > 0 ||
-      !!!this.firstCategoryValue ||
+      !this.firstCategoryValue ||
       this.secondCategoryValue.length <= 0 ||
       this.thirdCategoryValue.length <= 0 ||
-      !!!this.scoreValue
+      !this.scoreValue
     ) {
       isDisabledSubmit = true
     }
@@ -264,7 +264,7 @@ export default class SingleQuestions extends Component {
    * 录入成功弹框-去首页
    */
   onGoHomeSuccessModal = () => {
-    window.location.href = '/question-bank'
+    window.location.href = '/questionBank'
   }
 
   /**

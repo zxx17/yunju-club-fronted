@@ -6,31 +6,31 @@ import './index.less'
 const MENULIST = [
   {
     key: 'questionBank',
-    title: '刷题（理论练习）',
-    route: '/question-bank',
+    title: '资源库',
+    route: '/questionBank',
     finished: true
   },
   {
     key: 'prictiseQuestion',
-    title: '练题（资源库）',
-    route: '/practise-questions',
+    title: '理论练习',
+    route: '/practiseQuestions',
     finished: true
   },
   {
     key: 'practiceQuestions',
-    title: '鸡圈（交流社区）',
-    route: '/jichi-club',
+    title: '交流圈子',
+    route: '/yunjuClub',
     finished: true
   },
   {
     key: 'iotSimulationLab',
     title: '仿真实验室',
-    route: '/iotsimulation-lab',
+    route: '/iotSimulationLab',
     finished: true
   },
   {
     key: 'interList',
-    title: '云边端实验室',
+    title: '云端实验室',
     route: '/inter-list',
     finished: false
   }
@@ -38,7 +38,7 @@ const MENULIST = [
 
 // 顶部tab映射
 const mapMenu = {
-  '/question-bank': 'questionBank'
+  '/questionBank': 'questionBank'
 }
 
 const TopMenu = () => {
