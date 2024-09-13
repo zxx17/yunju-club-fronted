@@ -114,6 +114,10 @@ const Header = () => {
     navigate('/search-detail?t=' + value)
   }
 
+  const handleGoIndex = () => {
+    navigate('/questionBank')
+  }
+
   const goPath = item => {
     if (item.path) {
       window.open(item.path, '_blank')
@@ -124,7 +128,7 @@ const Header = () => {
     <div className='head-navigator-box'>
       <div className='head-navigator'>
         <div className='head-navigator-left'>
-          <div className='head-navigator-logo'>
+          <div onClick={handleGoIndex} className='head-navigator-logo'>
             <img src={Logo} style={{ height: 50 }} />
           </div>
           <TopMenu />

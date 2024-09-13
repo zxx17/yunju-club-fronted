@@ -7,7 +7,7 @@ export const mockRankingModuleList = [
         id: 1,
         wechatName: 'jcdw',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅大王1',
         subjectCount: 160
       },
@@ -15,7 +15,7 @@ export const mockRankingModuleList = [
         id: 2,
         wechatName: 'jcdw1',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅大王2',
         subjectCount: 140
       },
@@ -23,7 +23,7 @@ export const mockRankingModuleList = [
         id: 3,
         wechatName: 'jcdw2',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅大王',
         subjectCount: 101
       },
@@ -31,7 +31,7 @@ export const mockRankingModuleList = [
         id: 4,
         wechatName: 'jcdw3',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅小王',
         subjectCount: 100
       },
@@ -39,7 +39,7 @@ export const mockRankingModuleList = [
         id: 5,
         wechatName: 'jcdw4',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅大王5',
         subjectCount: 99
       }
@@ -53,7 +53,7 @@ export const mockRankingModuleList = [
         id: 1,
         wechatName: 'jcdw5',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅小王',
         subjectCount: 160
       },
@@ -61,7 +61,7 @@ export const mockRankingModuleList = [
         id: 2,
         wechatName: 'jcdw6',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅大王2',
         subjectCount: 150
       },
@@ -69,7 +69,7 @@ export const mockRankingModuleList = [
         id: 3,
         wechatName: 'jcdw7',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅大王',
         subjectCount: 101
       },
@@ -77,7 +77,7 @@ export const mockRankingModuleList = [
         id: 4,
         wechatName: 'jcdw8',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅大王4',
         subjectCount: 100
       },
@@ -85,7 +85,7 @@ export const mockRankingModuleList = [
         id: 5,
         wechatName: 'jcdw9',
         createUserAvatar:
-          'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fnote%2Flarge%2Fpublic%2Fp37015927.jpg&refer=http%3A%2F%2Fimg1.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1699286185&t=00db8ff5a1e11783f6c8eba954a5891f',
+          'http://192.168.150.101:9674/user/default/avatar.png',
         createUser: '鸡翅大王5',
         subjectCount: 99
       }
