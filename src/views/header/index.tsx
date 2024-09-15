@@ -55,9 +55,9 @@ const discoverItems = [
   },
   {
     title: '我是管理员',
-    subTitle: '管理维护入口',
+    subTitle: '后台管理入口',
     key: 'admin',
-    path: ''
+    path: 'http://localhost'
   },
   {
     title: '联系作者',
