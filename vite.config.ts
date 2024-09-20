@@ -56,6 +56,10 @@ export default ({ mode }) => {
         '/iot':{
           target: env.VITE_API_HOST,
           changeOrigin: true
+        },
+        '/ai':{
+          target: env.VITE_API_HOST,
+          changeOrigin: true
         }
       }
     }

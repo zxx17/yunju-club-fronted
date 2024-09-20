@@ -51,7 +51,7 @@ const Login = () => {
         localStorage.setItem('userInfo', JSON.stringify(res.data));
         await getUserInfo(res.data.loginId);
         setTimeout(() => {
-          navigate('/question-bank');
+          navigate('/questionBank');
         }, 500);
       } else {
         message.error('登录失败，请重试');

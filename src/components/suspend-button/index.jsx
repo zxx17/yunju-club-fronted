@@ -1,6 +1,15 @@
+// TODO 有个bug，当1s隐藏之后球会消失
 import React, { Component } from 'react'
 import { Modal, Input, Button, List } from 'antd'
-import './index.less'
+import req from '@utils/request' // 假设这是一个封装好的请求工具函数
+import './index.less' // 假设这是样式文件路径
+
+function getLastDataPart(str) {
+  // 使用 "data:" 分割字符串，并过滤掉可能产生的空字符串
+  var parts = str.split('data:').filter(Boolean)
+  // 获取并返回最后一个元素
+  return parts[parts.length - 1]
+}
 
 class SuspendButton extends Component {
   constructor(props) {
@@ -8,7 +17,7 @@ class SuspendButton extends Component {
     this.state = {
       oLeft: 0, // 初始左边距
       oTop: 200, // 初始上边距
-      isHidden: true, // 是否靠边隐藏
+      isHidden: false, // 是否靠边隐藏
       visible: false, // 对话框是否可见
       messages: [], // 消息列表
       inputMessage: '' // 输入框消息
@@ -29,7 +38,7 @@ class SuspendButton extends Component {
     this.clearAutoHideTimer() // 清除已有定时器
     this.autoHideTimer = setTimeout(() => {
       this.setState({ isHidden: true })
-    }, 1000) // 1秒不操作后自动隐藏
+    }, 90000000) // 1秒不操作后自动隐藏
   }
 
   clearAutoHideTimer() {
@@ -104,24 +113,23 @@ class SuspendButton extends Component {
 
       this.startAutoHideTimer() // 拖动结束后启动1秒计时
     }
+    // 确保点击不会导致悬浮按钮消失
+    this.setState({ isHidden: false })
   }
 
-  // 打开对话框
   openDialog = () => {
     this.setState({ visible: true })
   }
 
-  // 关闭对话框
   closeDialog = () => {
+    // 修改这里，确保按钮不隐藏
     this.setState({ visible: false })
   }
 
-  // 处理输入框内容变化
   handleInputChange = e => {
     this.setState({ inputMessage: e.target.value })
   }
 
-  // 发送消息
   sendMessage = async () => {
     const { inputMessage, messages } = this.state
     if (!inputMessage.trim()) return
@@ -143,19 +151,18 @@ class SuspendButton extends Component {
     })
   }
 
-  // 模拟调用后端接口
   fetchGPTResponse = async message => {
-    // 这里使用fetch来调用后端接口
-    // 示例: const response = await fetch('GPT_API_URL', { method: 'POST', body: JSON.stringify({ message }) });
-    // const data = await response.json();
-    // return data.reply;
+    const response = await req(
+      {
+        method: 'post',
+        url: '/aiModel/send',
+        data: JSON.stringify({ context: message, useHistoryData: false })
+      },
+      '/ai'
+    )
 
     // 模拟后端返回消息
-    return new Promise(resolve => {
-      setTimeout(() => {
-        resolve(`${message}`)
-      }, 1000)
-    })
+    return getLastDataPart(response)
   }
 
   render() {
