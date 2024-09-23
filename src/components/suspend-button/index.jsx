@@ -1,4 +1,4 @@
-// TODO 有个bug，当1s隐藏之后球会消失
+// TODO 有个bug，当1s隐藏之后球会消失,目前设置为不隐藏
 import React, { Component } from 'react'
 import { Modal, Input, Button, List } from 'antd'
 import req from '@utils/request' // 假设这是一个封装好的请求工具函数

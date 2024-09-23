@@ -59,7 +59,7 @@ export default class MultipleQuestions extends Component {
     if (isDisabledSubmit || !isSubmit) {
       return
     }
-    if (!!!subjectName) {
+    if (!subjectName) {
       message.warning('请输入题目名称')
       return
     }
@@ -68,7 +68,7 @@ export default class MultipleQuestions extends Component {
       message.warning('请录入答案')
       return
     }
-    if (!!!this.firstCategoryValue) {
+    if (!this.firstCategoryValue) {
       message.warning('请选择一级分类')
       return
     }
@@ -153,12 +153,12 @@ export default class MultipleQuestions extends Component {
     let list = this.currentActive.filter(item => item.optionContent === defalutLabel)
     let isDisabledSubmit = false
     if (
-      !!!subjectName ||
+      !subjectName ||
       list.length > 0 ||
-      !!!this.firstCategoryValue ||
+      !this.firstCategoryValue ||
       this.secondCategoryValue.length <= 0 ||
       this.thirdCategoryValue.length <= 0 ||
-      !!!this.scoreValue
+      !this.scoreValue
     ) {
       isDisabledSubmit = true
     }
@@ -286,7 +286,7 @@ export default class MultipleQuestions extends Component {
    * @param {*} list
    */
   handleChangeRank = list => {
-    this.rankId = list[0]
+    this.rankId = list[0].categoryId
     let isDisabledSubmit = this.checkData()
     this.setState({
       isDisabledSubmit

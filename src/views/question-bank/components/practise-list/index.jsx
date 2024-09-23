@@ -60,14 +60,14 @@ class PracticeList extends Component {
    * 去练题
    */
   onChangeJump = () => {
-    window.open('/practise-questions', '_blank')
+    window.open('/practiseQuestions', '_blank')
   }
 
   render() {
     const { contributionList, isLoading, contributeType } = this.state
     return (
       <Fragment>
-        {contributionList?.length > 0 && (
+        {contributionList?.length > -1 && (
           <RankingBox
             isLoading={isLoading}
             contributionList={contributionList}

@@ -67,7 +67,7 @@ const AssessmentReport = props => {
    * 练习其他技能
    */
   const onChangePracticeOther = () => {
-    navigate('/practise-questions')
+    navigate('/practiseQuestions')
   }
 
   /**

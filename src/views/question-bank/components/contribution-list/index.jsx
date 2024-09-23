@@ -79,7 +79,7 @@ const ContributionList = props => {
 
   return (
     <Fragment>
-      {contributionList?.length > 0 && (
+      {contributionList?.length > -1 && (
         <RankingBox
           isLoading={loading}
           contributionList={contributionList}

@@ -72,15 +72,15 @@ export default class BriefQuestions extends Component {
     if (!isSubmit) {
       return
     }
-    if (!!!subjectName) {
+    if (!subjectName) {
       message.warning('请输入题目名称')
       return
     }
-    if (!!!this.subjectAnswer) {
+    if (!this.subjectAnswer) {
       message.warning('请输入题目答案')
       return
     }
-    if (!!!this.firstCategoryValue) {
+    if (!this.firstCategoryValue) {
       message.warning('请选择一级分类')
       return
     }
@@ -100,7 +100,7 @@ export default class BriefQuestions extends Component {
       subjectDifficult: this.rankId,
       subjectType: 4,
       subjectScore: 1,
-      subjectParse: '解析什么',
+      subjectParse: '',
       subjectAnswer: this.subjectAnswer,
       categoryIds: this.secondCategoryValue.filter(item => item.active).map(t => t.id),
       labelIds: this.thirdCategoryValue.filter(item => item.active).map(t => t.id)
@@ -136,9 +136,9 @@ export default class BriefQuestions extends Component {
     const { subjectName } = this.state
     let isDisabledSubmit = false
     if (
-      !!!subjectName ||
-      !!!this.subjectAnswer ||
-      !!!this.firstCategoryValue ||
+      !subjectName ||
+      !this.subjectAnswer ||
+      !this.firstCategoryValue ||
       this.secondCategoryValue.length <= 0
       //  ||
       // this.thirdCategoryValue.length <= 0

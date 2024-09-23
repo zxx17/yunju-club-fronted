@@ -286,7 +286,7 @@ export default class SingleQuestions extends Component {
    * @param {*} list
    */
   handleChangeRank = list => {
-    this.rankId = list[0]
+    this.rankId = list[0].categoryId
     let isDisabledSubmit = this.checkData()
     this.setState({
       isDisabledSubmit
