@@ -152,11 +152,17 @@ class SuspendButton extends Component {
   }
 
   fetchGPTResponse = async message => {
+    if (message === '你是谁') {
+      return '我是小云学习助手，由云聚物联网技术社区训练的人工智能语言模型。我的目的是帮助用户解答问题、提供信息和进行交流。有什么我可以帮助你的吗？'
+    }
+    if (message === `what's your name?`) {
+      return 'I am a language model developed by YJ-IOT-Club, and you can call me Xiao Yun.'
+    }
     const response = await req(
       {
         method: 'post',
         url: '/aiModel/send',
-        data: JSON.stringify({ context: message, useHistoryData: false })
+        data: JSON.stringify({ context: message, useHistoryData: true })
       },
       '/ai'
     )
@@ -197,7 +203,7 @@ class SuspendButton extends Component {
         {/* 对话框 */}
         <Modal
           width={1300}
-          title='AI学习助手'
+          title='小云学习助手'
           visible={visible}
           onCancel={this.closeDialog}
           footer={null}
