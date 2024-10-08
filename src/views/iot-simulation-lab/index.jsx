@@ -53,7 +53,10 @@ const findItemByKey = (items, key) => {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
     if (item.key === key) {
-      return item.projectUrl
+      const res = { projectUrl: null, projectDesc: null }
+      res.projectUrl = item.projectUrl
+      res.projectDesc = item.projectDesc
+      return res
     }
     if (item.children) {
       const found = findItemByKey(item.children, key)
@@ -87,7 +90,6 @@ const IoTSimLab = () => {
     /**请求计数 */
     const fetchSimCount = async () => {
       const data = await getSimCount()
-      console.log(data)
       setSimCount(data || [])
     }
     fetchSimCount()
@@ -97,8 +99,12 @@ const IoTSimLab = () => {
   const onClick = e => {
     const keyValue = e.key
     const itemValue = findItemByKey(menuItems, keyValue)
-    console.log('click ', keyValue, ' with url ', itemValue)
-    navigate('/iotSimulationLabFrame')
+    navigate(
+      `/iotSimulationLabFrame?projectUrl=` +
+        itemValue.projectUrl +
+        '&projectDesc=' +
+        itemValue.projectDesc
+    )
   }
 
   return (
