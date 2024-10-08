@@ -167,7 +167,6 @@ class SuspendButton extends Component {
       '/ai'
     )
 
-    // 模拟后端返回消息
     return getLastDataPart(response)
   }
 
