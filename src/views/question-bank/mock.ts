@@ -7,40 +7,40 @@ export const mockRankingModuleList = [
         id: 1,
         wechatName: 'jcdw',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅大王1',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户1',
         subjectCount: 160
       },
       {
         id: 2,
         wechatName: 'jcdw1',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅大王2',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户2',
         subjectCount: 140
       },
       {
         id: 3,
         wechatName: 'jcdw2',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅大王',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户',
         subjectCount: 101
       },
       {
         id: 4,
         wechatName: 'jcdw3',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅小王',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户',
         subjectCount: 100
       },
       {
         id: 5,
         wechatName: 'jcdw4',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅大王5',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户5',
         subjectCount: 99
       }
     ]
@@ -53,40 +53,40 @@ export const mockRankingModuleList = [
         id: 1,
         wechatName: 'jcdw5',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅小王',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户ss',
         subjectCount: 160
       },
       {
         id: 2,
         wechatName: 'jcdw6',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅大王2',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户2',
         subjectCount: 150
       },
       {
         id: 3,
         wechatName: 'jcdw7',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅大王',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户',
         subjectCount: 101
       },
       {
         id: 4,
         wechatName: 'jcdw8',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅大王4',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户4',
         subjectCount: 100
       },
       {
         id: 5,
         wechatName: 'jcdw9',
         createUserAvatar:
-          'http://192.168.150.101:9674/user/default/avatar.png',
-        createUser: '鸡翅大王5',
+          'http://192.168.155.57:9674/user/default/avatar.png',
+        createUser: '默认用户5',
         subjectCount: 99
       }
     ]

@@ -31,8 +31,8 @@ const MENULIST = [
   {
     key: 'interList',
     title: '云端实验室',
-    route: '/inter-list',
-    finished: false
+    route: '/iotCloudLabWelcome',
+    finished: true
   }
 ]
 

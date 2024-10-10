@@ -62,6 +62,14 @@ const router = createBrowserRouter([
       {
         path: 'iotSimulationLabFrame',
         Component: lazy(() => import('@/views/iot-simulation-lab/frame-lab/index'))
+      },
+      {
+        path: 'iotCloudLabWelcome',
+        Component: lazy(() => import('@/views/iot-cloud-lab/index'))
+      },
+      {
+        path: 'ioTCloudLab',
+        Component: lazy(() => import('@/views/iot-cloud-lab/cloud-lab/index'))
       }
     ]
   }
