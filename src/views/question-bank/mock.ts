@@ -32,7 +32,7 @@ export const mockRankingModuleList = [
         wechatName: 'jcdw3',
         createUserAvatar:
           'http://192.168.155.57:9674/user/default/avatar.png',
-        createUser: '默认用户',
+        createUser: '默认用户9',
         subjectCount: 100
       },
       {
@@ -54,7 +54,7 @@ export const mockRankingModuleList = [
         wechatName: 'jcdw5',
         createUserAvatar:
           'http://192.168.155.57:9674/user/default/avatar.png',
-        createUser: '默认用户ss',
+        createUser: '默认用户8',
         subjectCount: 160
       },
       {
@@ -70,7 +70,7 @@ export const mockRankingModuleList = [
         wechatName: 'jcdw7',
         createUserAvatar:
           'http://192.168.155.57:9674/user/default/avatar.png',
-        createUser: '默认用户',
+        createUser: '默认用户0',
         subjectCount: 101
       },
       {
