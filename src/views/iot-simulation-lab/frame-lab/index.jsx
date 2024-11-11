@@ -35,7 +35,7 @@ function IoTSimLabFrame() {
       '/iot'
     )
     if (response.success && response.data) {
-      // TODO 回显问题待解决
+      // TODO 回显问题, 无点击触发问题
       return message.success('保存实验记录成功')
     } else {
       message.error('设置实验记录失败')

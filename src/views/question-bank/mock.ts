@@ -7,7 +7,7 @@ export const mockRankingModuleList = [
         id: 1,
         wechatName: 'jcdw',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户1',
         subjectCount: 160
       },
@@ -15,7 +15,7 @@ export const mockRankingModuleList = [
         id: 2,
         wechatName: 'jcdw1',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户2',
         subjectCount: 140
       },
@@ -23,7 +23,7 @@ export const mockRankingModuleList = [
         id: 3,
         wechatName: 'jcdw2',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户',
         subjectCount: 101
       },
@@ -31,7 +31,7 @@ export const mockRankingModuleList = [
         id: 4,
         wechatName: 'jcdw3',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户9',
         subjectCount: 100
       },
@@ -39,7 +39,7 @@ export const mockRankingModuleList = [
         id: 5,
         wechatName: 'jcdw4',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户5',
         subjectCount: 99
       }
@@ -53,7 +53,7 @@ export const mockRankingModuleList = [
         id: 1,
         wechatName: 'jcdw5',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户8',
         subjectCount: 160
       },
@@ -61,7 +61,7 @@ export const mockRankingModuleList = [
         id: 2,
         wechatName: 'jcdw6',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户2',
         subjectCount: 150
       },
@@ -69,7 +69,7 @@ export const mockRankingModuleList = [
         id: 3,
         wechatName: 'jcdw7',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户0',
         subjectCount: 101
       },
@@ -77,7 +77,7 @@ export const mockRankingModuleList = [
         id: 4,
         wechatName: 'jcdw8',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户4',
         subjectCount: 100
       },
@@ -85,7 +85,7 @@ export const mockRankingModuleList = [
         id: 5,
         wechatName: 'jcdw9',
         createUserAvatar:
-          'http://192.168.155.57:9674/user/default/avatar.png',
+          'http://www.zsdl.site:19000/user/default/avatar.png',
         createUser: '默认用户5',
         subjectCount: 99
       }

@@ -5,19 +5,19 @@ export const apiName = {
     /**
      * 新增二级分类
      */
-    addInterviewCategory: '/admin/question/category/add',
+    addInterviewCategory: '/category/add',
     /**
      * 删除二级分类
      */
-    deleteInterviewCategory: '/admin/question/category/delete',
+    deleteInterviewCategory: '/category/delete',
     /**
      * 新增三级标签
      */
-    addInterviewLabel: '/admin/question/label/add',
+    addInterviewLabel: '/label/add',
     /**
      * 删除三级标签
      */
-    deleteInterviewLabel: '/admin/question/label/delete',
+    deleteInterviewLabel: '/label/delete',
 };
 
 /**

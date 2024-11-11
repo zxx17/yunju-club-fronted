@@ -98,18 +98,20 @@ export default class TagsEditor extends Component {
 
   /**
    * 增加标签
+   * TODO 新增后 再去新增题目导致了新题目的小类id和标签id为空的回显问题
    * @param {*} inputValue 当前的值
    */
   postAddInterviewCategory = inputValue => {
     const { parentCategoryValue, moduleType, categoryList } = this.props
+
     let params_2 = {
       categoryName: inputValue,
       categoryType: 2,
-      parentId: parentCategoryValue[0]
+      parentId: parentCategoryValue
     }
     let params_3 = {
       labelName: inputValue,
-      primaryCategoryId: parentCategoryValue[0]
+      categoryId: parentCategoryValue
     }
     let params = moduleType == ModuleType.third ? params_3 : params_2
     req({
@@ -244,7 +246,7 @@ export default class TagsEditor extends Component {
                 }}
                 key={(item.id || item.categoryId) + '_' + item.categoryName}
                 // 支持删除标签
-                closable={item.isShowClose && isDeleteTag}
+                closable={isDeleteTag}
                 className={`tags-editor-item ${item.active ? 'tag-active' : ''}`}
                 onClick={this.onChangeLabel(index, item.active)}
                 onClose={() => this.handleClose(index, item.id)}
