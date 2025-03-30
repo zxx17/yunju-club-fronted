@@ -74,7 +74,13 @@ function IoTSimLabFrame() {
       </div>
       {/* 实验界面 */}
       <div className='iframe-container'>
-        <iframe src={`https://wokwi.com/` + projectUrl} />
+        <iframe 
+          src={`https://wokwi.com/projects/${projectUrl}`}
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+          allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write"
+          loading="lazy"
+          style={{ border: 0 }}
+        />
         <div className='overlay-header' />
       </div>
     </div>
